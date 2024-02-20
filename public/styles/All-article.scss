@@ -1,0 +1,164 @@
+@import "/src/app/globals.scss";
+
+.all-article-description {
+  font-size: 1.5em;
+}
+
+.whole-filter {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20px auto;
+
+  .main-filter-top-part {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $heavy-brown;
+    font-size: 1.4em;
+    padding-bottom: 10px;
+
+    .first-filter {
+      width: 20%;
+      .category-btn {
+        position: relative;
+        width: fit-content;
+        border: 2px solid $heavy-brown;
+        color: $absolute-white;
+        border-radius: 5px;
+        background-color: $heavy-brown;
+        cursor: pointer;
+        padding: 5px 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .empty-space {
+          width: 100%;
+          position: absolute;
+          top: 30px;
+          right: 0px;
+          height: 30px;
+        }
+
+        .all-article-category {
+          position: absolute;
+          width: 100%;
+          top: 50px;
+          right: 0px;
+          border-radius: 5px;
+          overflow: hidden;
+          border: 2px solid $heavy-brown;
+
+          .item {
+            padding: 3px 0px;
+            background-color: $absolute-white;
+            font-size: 1.2em;
+            border-bottom: 1px solid $absolute-white;
+            text-align: center;
+            color: $absolute-black;
+          }
+
+          .item-active {
+            padding: 3px 0px;
+            background-color: $heavy-brown;
+            font-size: 1.3em;
+            border-bottom: 1px solid $absolute-white;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .second-filter {
+      width: 60%;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      .filter-btn {
+        border: 2px solid $heavy-brown;
+        color: $absolute-white;
+        border-radius: 5px;
+        background-color: $heavy-brown;
+        cursor: pointer;
+        padding: 5px 20px;
+      }
+
+      .filter-btn-active {
+        border: 2px solid $heavy-brown;
+        color: $absolute-black;
+        border-radius: 5px;
+        background-color: $absolute-white;
+        cursor: pointer;
+        padding: 5px 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    .all-article-lenght {
+      display: flex;
+      justify-content: end;
+      width: 20%;
+
+      div {
+        width: fit-content;
+        border: 1px solid $absolute-black;
+        padding: 5px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .whole-filter {
+    .main-filter-top-part {
+      display: flex;
+      .first-filter {
+        width: 25%;
+      }
+
+      .second-filter {
+        width: 50%;
+      }
+
+      .all-article-lenght {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .whole-filter {
+    .main-filter-top-part {
+      display: flex;
+      flex-wrap: wrap;
+      .first-filter {
+        width: 100%;
+        order: 3;
+        display: flex;
+        justify-content: center;
+      }
+
+      .second-filter {
+        width: 100%;
+        order: 2;
+        margin: 10px 0px;
+
+        .filter-btn,
+        .filter-btn-active {
+          width: 50%;
+          text-align: center;
+        }
+      }
+
+      .all-article-lenght {
+        width: 100%;
+        order: 1;
+        justify-content: center;
+      }
+    }
+  }
+}

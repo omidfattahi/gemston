@@ -1,0 +1,220 @@
+@import "/src/app/globals.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-panel-admin-layout {
+  display: flex;
+  width: 100%;
+  background-color: $absolute-white;
+
+  .right-part-admin-panel {
+    position: relative;
+    min-height: 100%;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // flex-grow: 0;
+    // width: 100%;
+    background-color: #00014e;
+    font-size: 1.5em;
+    padding: 10px 20px;
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sticky-section {
+      position: sticky;
+      top: 10px;
+
+      .home {
+        width: fit-content;
+        color: $absolute-white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 2px solid $absolute-white;
+      }
+
+      .home:hover {
+        color: #a3a4ff;
+        border-color: #a3a4ff;
+      }
+
+      .pages-btn {
+        background-color: $absolute-white;
+        margin-top: 20px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        border: 2px solid $absolute-white;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .pages-btn-active {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        background-color: transparent;
+        color: $absolute-white;
+        margin-top: 20px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        border: 2px solid $absolute-white;
+      }
+    }
+  }
+
+  .left-part-admin-panel {
+    // flex-grow: 1;
+    // width: 100%;
+    margin-inline-start: 20px;
+  }
+
+  .navbar-collapse {
+    flex-basis: 0;
+  }
+}
+
+.mynav {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-padding-x: 0;
+  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+}
+
+.my-navbar-toggle {
+  background-color: rgb(127, 162, 214);
+  // width: 100%;
+  margin-block-end: 5px;
+}
+
+.article-title {
+  font-size: 2.5em;
+}
+
+.add-article-btn {
+  gap: 10px;
+  background-color: $lighter-brown;
+  border: 1px solid $heaviest-brown;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.add-article-btn:hover {
+  gap: 10px;
+  background-color: $heavy-brown;
+  border: 1px solid $heaviest-brown;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.plus-icon {
+  margin-top: 4px;
+}
+
+.blog-table-upper {
+  display: grid;
+  grid-template-columns: repeat(4, 23%) 10%;
+  border-bottom: 2px solid;
+}
+
+.main-table {
+  border: 2px solid;
+  margin-left: 25px;
+  margin-top: 25px;
+
+  div {
+    font-size: 22px;
+  }
+}
+
+.delete-edit-btn {
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.delete-edit-btn:hover {
+  background-color: $orange-footer;
+  cursor: pointer;
+}
+
+.blog-image-table {
+  margin-left: 20px;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.blog-table-contents {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 23%) 10%;
+  border-bottom: solid;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    background-color: $light-brown;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid $heavy-brown;
+    margin-left: 15px;
+  }
+
+  a:hover {
+    color: $absolute-white;
+  }
+}
+
+@media (max-width: 750px) {
+  .blog-table-contents {
+    grid-template-columns: 100%;
+  }
+
+  .blog-table-upper {
+    display: none;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 880px) {
+  .blog-table-contents {
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1460px) {
+  .blog-table-upper {
+    grid-template-columns: repeat(5, 20%);
+  }
+
+  .blog-table-contents {
+    grid-template-columns: repeat(5, 20%);
+    gap: 8px;
+  }
+}
+
+// @media (min-width:550px) and (max-width:700px) {
+//   .right-part-admin-panel {
+//     width: 80%;
+//   }
+// }
+
+// @media(min-width:701px) and (max-width:990px) {
+//   .right-part-admin-panel {
+//     width: 60%;
+//   }
+
+// }

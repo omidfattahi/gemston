@@ -1,0 +1,50 @@
+// Default Entire Website Styles
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+// Entire Website Variable Colors
+
+$absolute-white: #fff;
+$absolute-black: #000;
+$silver: #242424;
+$lighter-grey: #dddcdc;
+$light-grey: #c9c0b4;
+$heavy-grey: #828282;
+$so-light-brown: #fff5e5;
+$lighter-brown: #e9d4b5;
+$stone-page-color: #d7c2a4;
+$light-brown: #c6a579;
+$article-page-brown: #c7af8b;
+$heavy-brown: #bf8f46;
+$heavier-brown: #946c36;
+$so_heavier_brown: #a17e4f;
+$heaviest-brown: #967446;
+$absolute-brown: #2b2024;
+$lighter-blue: #aec2d1;
+$heavy-blue: #35799f;
+$light-grey: rgba(236, 233, 233, 0.667);
+$heavy-grey: rgb(168, 168, 168);
+$bisque: bisque;
+$orange-footer: #e9d4b5;
+$footer-link-hover: rgb(228, 139, 31);
+$so-heavy-blue: #00014e;
+$so-light-blue: rgb(196, 196, 255);
+
+// Usefull Css Class
+.default-link {
+  text-decoration: none;
+  color: unset;
+}
+
+video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}

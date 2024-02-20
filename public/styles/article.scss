@@ -1,0 +1,240 @@
+@import "../../src/app/globals.scss";
+
+.main-every-article-page-layout {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+
+  .every-article-image {
+    img {
+      border-radius: 16px;
+    }
+  }
+}
+
+.regular-h1-title-style {
+  text-align: center;
+  margin: 20px 0px -20px;
+}
+
+.main-related-article-page {
+  padding: 0px;
+  display: flex;
+  margin: 0px auto 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.self-related-article-page {
+  width: 32%;
+  background-color: $so-light-brown;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  margin: 20px 0px 0px;
+}
+
+.related-article-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0px 3%;
+  margin-top: 10px;
+}
+
+.related-article-content {
+  text-align: justify;
+  text-align-last: center;
+  font-size: 1.1em;
+  padding: 0px 3%;
+}
+
+.related-article-line {
+  border: 1px solid $absolute-black;
+  opacity: 0.7;
+}
+
+.related-article-down-part {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 3%;
+  align-items: center;
+
+  div {
+    font-size: 1em;
+  }
+}
+
+.eye {
+  display: inline-block;
+  margin-inline-end: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.main-see-video-section {
+  display: grid;
+  margin: 30px auto;
+  grid-template-columns: repeat(4, 24%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.self-see-video-section {
+  video {
+    border-radius: 16px;
+  }
+}
+
+.self-see-video-section:nth-child(1),
+.self-see-video-section:nth-child(2),
+.self-see-video-section:nth-child(3),
+.self-see-video-section:nth-child(4),
+.self-see-video-section:nth-child(5) {
+  margin-top: 0px;
+}
+
+.self-see-video-section:nth-child(4),
+.self-see-video-section:nth-child(5) {
+  margin-top: 10px;
+}
+
+.self-see-video-section:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.self-see-video-section:nth-child(4) {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.self-see-video-section:nth-child(5) {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.every-article-content {
+  text-align: justify;
+  font-size: 1.2em;
+  margin: 20px 0px;
+}
+
+@media (max-width: 1200px) {
+  .main-related-article-page {
+    gap: 2%;
+    .self-related-article-page {
+      width: 49%;
+    }
+
+    .self-related-article-page:last-of-type {
+      margin: 20px auto 0px;
+    }
+  }
+
+  .self-see-video-section:nth-child(2),
+  .self-see-video-section:nth-child(3),
+  .self-see-video-section:nth-child(4),
+  .self-see-video-section:nth-child(5) {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-related-article-page {
+    .self-related-article-page {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .self-see-video-section:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .self-see-video-section:nth-child(2) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .self-see-video-section:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .self-see-video-section:nth-child(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .self-see-video-section:nth-child(5) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 600px) {
+  .self-see-video-section:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .self-see-video-section:nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .self-see-video-section:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .self-see-video-section:nth-child(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .self-see-video-section:nth-child(5) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.every-article-video {
+  video {
+    border-radius: 16px;
+  }
+}

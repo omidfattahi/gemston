@@ -1,0 +1,13 @@
+@import "/src/app/globals.scss";
+
+.main-loader-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/photo/loader-bacckground.jpg');
+
+h1{
+    color: $absolute-black;
+}
+}

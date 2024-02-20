@@ -1,0 +1,297 @@
+@import "/src/app/globals.scss";
+
+.main-top-stone-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 5px;
+
+  .stone-name-style {
+    cursor: pointer;
+  }
+}
+
+.content-style-stone {
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.main-section-zoom-images-stone {
+  width: 50%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 18% 82%;
+}
+
+.zoom-images-part-right {
+  display: grid;
+  gap: 3%;
+  .self-map-image {
+    border-radius: 16px;
+    border: 2px solid $heavier-brown;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.zoom-images-part-left {
+  margin-inline-start: 3%;
+  .self-map-image {
+    border-radius: 16px;
+    border: 2px solid $heavier-brown;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-section-zoom-images-stone {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-section-zoom-images-stone {
+    width: 90%;
+  }
+}
+
+.main-every-stone-page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .every-stone-image {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .content-style-stone {
+    text-align: justify;
+    font-size: 1.1em;
+  }
+
+  .every-stone-video {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .every-stone-audio {
+    width: 70%;
+    margin: 0px auto;
+    audio::-webkit-media-controls-panel {
+      background-color: $lighter-brown;
+    }
+  }
+}
+
+.main-table-layout {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  overflow: hidden;
+
+  tr:nth-child(odd) td:nth-child(odd) {
+    border-inline-end: 1px solid black;
+    background-color: $lighter-brown;
+  }
+  tr:nth-child(even) td:nth-child(even) {
+    background-color: $lighter-brown;
+  }
+  tr:nth-child(odd) td:nth-child(even) {
+    background-color: $stone-page-color;
+  }
+  tr:nth-child(even) td:nth-child(odd) {
+    border-inline-end: 1px solid black;
+    background-color: $stone-page-color;
+  }
+  td {
+    border-bottom: 1px solid black;
+    width: 50%;
+    padding: 10px 10px;
+    font-size: 1.2em;
+  }
+
+  tr:last-child td:nth-child(even),
+  tr:last-child td:nth-child(odd) {
+    border-bottom: none;
+  }
+}
+
+.main-booresh-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  justify-content: space-evenly;
+  gap: 30px;
+  .self-booresh-image {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-booresh-layout {
+    grid-template-columns: repeat(2, 47%);
+  }
+}
+
+.self-all-stone-cover {
+  transition: all 0.5s ease;
+}
+
+.self-all-stone-cover:hover {
+  transform: scale(1.05);
+}
+
+.main-all-stone-cover {
+  display: grid;
+  grid-gap: 30px;
+  margin: 30px auto 0px;
+
+  .self-all-stone-cover:nth-child(1) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+
+  .self-all-stone-cover:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .self-all-stone-cover:nth-child(3) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .self-all-stone-cover:nth-child(4) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .self-all-stone-cover:nth-child(5) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.related-stone-cover {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.layout-bottom-related-article {
+  font-size: 1.4em;
+  padding: 5px 10px;
+  background-color: $silver;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $absolute-white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+
+  .related-stone-audio {
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-all-stone-cover {
+    .self-all-stone-cover:nth-child(1) {
+      grid-row-start: 1;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    .self-all-stone-cover:nth-child(2) {
+      grid-row-start: 5;
+      grid-row-end: 7;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .self-all-stone-cover:nth-child(3) {
+      grid-row-start: 5;
+      grid-row-end: 7;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+    .self-all-stone-cover:nth-child(4) {
+      grid-row-start: 7;
+      grid-row-end: 9;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .self-all-stone-cover:nth-child(5) {
+      grid-row-start: 7;
+      grid-row-end: 9;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
+}
+
+.related-stone-btn {
+  border: 2px solid $heavier-brown;
+  border-radius: 5px;
+  color: $absolute-black;
+  background-color: $lighter-brown;
+  padding: 10px 30px;
+  margin: 30px auto;
+  font-size: 1.3em;
+  width: fit-content;
+}
+
+.related-stone-btn:hover {
+  background-color: $heavier-brown;
+  border-color: $absolute-black;
+  color: $absolute-white;
+}
+
+.related-article-stone-page-title {
+  display: flex;
+  justify-content: center;
+  color: $so_heavier_brown;
+  margin: 0px;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.related-article-stone-page {
+  margin: 0px 0px 30px;
+}
+
+.main-layout-color-part {
+  position: absolute;
+  height: fit-content;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+}
+
+.filte-colors-every-stones {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid $absolute-black;
+  margin: 5px 0px;
+}

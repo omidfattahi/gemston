@@ -1,0 +1,45 @@
+@import "/src/app/globals.scss";
+
+.main-page_404 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  .gif_404 {
+    height: 500px;
+    width: 800px;
+  }
+
+  .text {
+    top: 30px;
+    position: absolute;
+    font-size: 3em;
+    margin-bottom: -100px;
+    z-index: 1;
+  }
+
+  .eat {
+    margin-top: -70px;
+    font-size: 1.5em;
+  }
+
+  a {
+    color: $absolute-white;
+    background-color: $absolute-black;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid $absolute-black;
+  }
+
+  a:hover {
+    color: $absolute-black;
+    background-color: $absolute-white;
+  }
+}

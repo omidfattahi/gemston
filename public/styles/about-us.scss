@@ -1,0 +1,128 @@
+@import "/src/app/globals.scss";
+
+.content {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.person-main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+
+  .person-inner-section {
+    margin-top: 20px;
+    width: 32%;
+    border: 2px solid $heavy-brown;
+    padding: 2%;
+    border-radius: 15px;
+    img {
+      border-radius: 5px;
+    }
+
+    .person-name-title {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    .text {
+      text-align: justify;
+      font-size: 1.1em;
+    }
+
+    button {
+      width: fit-content;
+      margin: 0px auto;
+      padding: 3px 20px;
+      border: 2px solid $heavy-brown;
+      background-color: $heavy-brown;
+      font-size: 1.2em;
+      border-radius: 5px;
+      color: $absolute-white;
+    }
+
+    button:hover {
+      background-color: $absolute-white;
+      color: $absolute-black;
+    }
+  }
+}
+
+.contact-us-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .data-section {
+    width: 49%;
+
+    .address {
+      font-size: 1.2em;
+    }
+
+    .email-phone-section {
+      color: $absolute-black;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-bottom: 2px solid $heavy-brown;
+      padding-bottom: 5px;
+    }
+
+    .socialmedia-section {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+
+      .socialmedia-icon {
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+
+  .map-section {
+    width: 49%;
+  }
+}
+
+@media (max-width: 992px) {
+  .person-main-section {
+    gap: 2%;
+
+    .person-inner-section {
+      width: 48.5%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .person-main-section {
+    gap: 0%;
+
+    .person-inner-section {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-us-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 30px;
+
+    .data-section {
+      width: 100%;
+    }
+
+    .map-section {
+      width: 100%;
+    }
+  }
+}
